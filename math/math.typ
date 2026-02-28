@@ -18,7 +18,7 @@
         stroke: main-color,
         fill: main-color.lighten(95%),
         {
-          set text(font: ("Times New Roman", "FZKai-Z03S"))
+          set text(font: ("New Computer Modern", "SimSun"))
           content
         },
       ),
@@ -48,11 +48,11 @@
 #let math-fun-exam(main-color: rgb(0, 0, 0), number: true, kind: "") = {
   if number { dic-he-ma-update(kind) }
   let title = kind + " " + if number { f-numbering(kind) }
-  text(fill: main-color, weight: "bold", font: ("Times New Roman", "FZHei-B01S"))[#title] + " "
+  text(fill: main-color, weight: "bold", font: ("New Computer Modern", "SimHei"))[#title] + " "
 }
 
 // 提示类环境
-#let math-fun-note(main-color: rgb(0, 0, 0), font: ("Times New Roman", "FZShuSong-Z01S"), kind, body) = (
+#let math-fun-note(main-color: rgb(0, 0, 0), font: ("New Computer Modern", "SimSun"), kind, body) = (
   text(fill: main-color, weight: "bold")[#kind]
     + " "
     + {

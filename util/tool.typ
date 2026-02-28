@@ -31,8 +31,8 @@
       for (i, j) in info {
         if j == none { } else {
           block(
-            text(font: ("Times New Roman", "FZKai-Z03S"), fill: black.lighten(50%))[#i：#j],
-            inset: (x: 6%),
+            text(font: ("New Computer Modern", "KaiTi"), fill: black.lighten(50%))[#i：#j],
+            inset: (x: 0%),
             width: 100%,
           )
         }

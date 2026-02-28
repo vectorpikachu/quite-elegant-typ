@@ -27,10 +27,11 @@
 
   // 字体
   set text(lang: "zh", region: "cn", size: 10pt)
-  set text(font: ("Times New Roman", "FZShuSong-Z01S"))
-  show emph: set text(font: ("Times New Roman", "FZKai-Z03S"))
-  show strong: set text(font: ("Times New Roman", "FZHei-B01S"))
-  show text.where(weight: "bold"): set text(font: ("Times New Roman", "FZHei-B01S"))
+  set text(font: ("New Computer Modern", "SimSun"))
+  show emph: set text(font: ("New Computer Modern", "KaiTi"))
+  show strong: set text(font: ("New Computer Modern", "SimHei"))
+  show text.where(weight: "bold"): set text(font: ("New Computer Modern", "SimHei"))
+  show raw: set text(font: ("MonacoLigaturized Nerd Font Mono", "Maple Mono NF"))
 
   // 标题
   show: heading-style.with(color-themes.structure)

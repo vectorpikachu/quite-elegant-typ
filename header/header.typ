@@ -7,7 +7,7 @@
   align(
     right,
     {
-      set text(font: ("Times New Roman", "FZKai-Z03S"))
+      set text(font: ("New Computer Modern", "KaiTi"))
       it
     },
   ),

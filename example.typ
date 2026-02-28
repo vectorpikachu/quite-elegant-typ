@@ -31,6 +31,7 @@
   author: [编译型战狼],
   date: datetime.today().display(),
   version: version(0, 2, 0),
+  logo: image("image/logo.jpg", width: 100%),
   other: (自定义: "信息"),
 )
 #default-outline()
@@ -123,7 +124,7 @@
 - 方正楷体
 - 方正仿宋
 
-其中方正的方正书宋、*方正黑体*、_方正楷体_、#text(font: "FZFangSong-Z02S")[方正仿宋] 四款字体均可免费试用，且可用于商业用途。
+其中方正的方正书宋、*方正黑体*、_方正楷体_、#text(font: "FangSong")[方正仿宋] 四款字体均可免费试用，且可用于商业用途。
 
 == 具体细节
 本模板的详细配置如下
