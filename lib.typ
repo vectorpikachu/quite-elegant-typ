@@ -25,3 +25,6 @@
 
 #import "util/problemset.typ": problemset
 #import "util/introduction.typ": introduction
+
+// 默认加载的工具
+#import "@preview/pinit:0.2.2": *

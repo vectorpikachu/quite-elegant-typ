@@ -46,7 +46,7 @@
         [], align(left, main), align(right, logo), [],
       )
     }
-    #extrainfo
+    #align(center + horizon)[#text(font: ("New Computer Modern", "KaiTi"), fill: black.lighten(50%))[#extrainfo]]
   ]
     + counter(page).update(1)
 )

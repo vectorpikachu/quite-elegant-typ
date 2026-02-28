@@ -29,10 +29,11 @@
   title: [Quite-Elegant-Typ：简单的书籍模板],
   subtitle: [ElegantBook 的 Typst 复刻],
   author: [编译型战狼],
-  date: datetime.today().display(),
-  version: version(0, 2, 0),
+  date: datetime.today().display("[year]年[month padding:none]月[day padding:none]日"),
+  //version: version(0, 2, 0),
   logo: image("image/logo.jpg", width: 100%),
-  other: (自定义: "信息"),
+  //other: (自定义: "信息"),
+  extrainfo: [这是额外信息]
 )
 #default-outline()
 
@@ -112,6 +113,47 @@
 #set raw(lang: "typst")
 
 ```
+#pagebreak()
+
+= `pinit` 使用
+
+== 简介
+
+Use #pin("h1")asymptotic notations#pin("h2") to describe asymptotic efficiency of algorithms.
+  (Ignore constant coefficients and lower-order terms.)
+
+Given a function $g(n)$, we denote by $O(g(n))$ the following *set of functions*:
+${f(n): "exists" c > 0 "and" n_0 > 0, "such that" f(n) <= c dot g(n) "for all" n >= n_0}$
+
+#pinit-highlight("h1", "h2")
+
+$f(n) = O(g(n))$: #pin(1)$f(n)$ is *asymptotically smaller* than $g(n)$.#pin(2)
+
+  #absolute-place(dx: 400pt, dy: 200pt, image(width: 10%, "image/黑脸.png"))
+
+$f(n) in O(g(n))$: $f(n)$ is *asymptotically* at most $g(n)$.
+
+  #pinit-line(stroke: 3pt + red, start-dy: -0.25em, end-dy: -0.25em, 1, 2)
+
+#block[Insertion Sort as an #pin("r1")example#pin("r2"):]
+
+  - Best Case: $T(n) approx c n + c' n - c''$ #pin(3)
+  - Worst case: $T(n) approx c n + (c' \/ 2) n^2 - c''$ #pin(4)
+
+  #pinit-rect("r1", "r2")
+
+#pinit-place(3, dx: 15pt, dy: -15pt)[#$T(n) = O(n)$]
+#pinit-place(4, dx: 15pt, dy: -15pt)[$T(n) = O(n)$]
+
+Q: Is $n^(3) = O(n^2)$#pin("que")? How to prove your answer#pin("ans")?
+
+#pinit-point-to("que", fill: red, [x])
+  #pinit-point-from("ans", body-dx: -150pt)[
+    Show that the equation $(3/2)^n >= c$ \
+    has infinitely many solutions for $n$.
+  ]
+
+
 #pagebreak()
 
 = 字体设置 <字体>
